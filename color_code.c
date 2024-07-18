@@ -27,7 +27,7 @@ int GetPairNumberFromColor(const ColorPair* colorPair) {
             colorPair->minorColor + 1;
 }
 
-void testNumberToPair(int pairNumber,enum MajorColor expectedMajor,enum MinorColor expectedMinor)
+void NumberToColorPair(int pairNumber,enum MajorColor expectedMajor,enum MinorColor expectedMinor)
 {
     ColorPair colorPair = GetColorFromPairNumber(pairNumber);
     char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
@@ -35,7 +35,7 @@ void testNumberToPair(int pairNumber,enum MajorColor expectedMajor,enum MinorCol
     printf("Got pair %s\n", colorPairNames);
 }
 
-void testPairToNumber(enum MajorColor major,enum MinorColor minor,int expectedPairNumber)
+void ColorPairToNumber(enum MajorColor major,enum MinorColor minor,int expectedPairNumber)
 {
     ColorPair colorPair;
     colorPair.majorColor = major;

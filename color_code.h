@@ -17,7 +17,7 @@ typedef struct {
     int pairNumber;
 } ColorPair;
 
-void testNumberToPair(int pairNumber, enum MajorColor expectedMajor, enum MinorColor expectedMinor);
-void testPairToNumber(enum MajorColor major, enum MinorColor minor, int expectedPairNumber);
+void NumberToColorPair(int pairNumber, enum MajorColor expectedMajor, enum MinorColor expectedMinor);
+void ColorPairToNumber(enum MajorColor major, enum MinorColor minor, int expectedPairNumber);
 
 #endif // COLOR_CODE_H
