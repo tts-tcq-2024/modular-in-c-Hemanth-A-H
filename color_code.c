@@ -43,3 +43,8 @@ void testPairToNumber(enum MajorColor major,enum MinorColor minor,int expectedPa
     colorPair.pairNumber = GetPairNumberFromColor(&colorPair);
     printf("Got pair number %d\n", colorPair.pairNumber);
 }
+
+int main()
+{
+  return 0;
+}
