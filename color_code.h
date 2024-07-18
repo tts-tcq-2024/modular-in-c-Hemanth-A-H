@@ -9,13 +9,13 @@ const char* MajorColorNames[] = {
     "White", "Red", "Black", "Yellow", "Violet"
 };
 
-#define numberOfMajorColors  (sizeof(MajorColorNames) / sizeof(MajorColorNames[0]));
+#define numberOfMajorColors  (sizeof(MajorColorNames) / sizeof(MajorColorNames[0]))
 
 const char* MinorColorNames[] = {
     "Blue", "Orange", "Green", "Brown", "Slate"
 };
 
-#define numberOfMinorColors (sizeof(MinorColorNames) / sizeof(MinorColorNames[0]));
+#define numberOfMinorColors (sizeof(MinorColorNames) / sizeof(MinorColorNames[0]))
 
 typedef struct {
     enum MajorColor majorColor;
