@@ -1,26 +1,39 @@
 #include <color_code.h>
 #include <gtest/gtest.h>
 
-extern ColorPair colorPair;
+extern ColorPair colorPairs;
+extern int MAX_COLORPAIR_NAME_CHARS;
 
 Test(Testcase1,testNumberToColorPair)
 {
-    NumberToColorPair(4, WHITE, BROWN);
-    EXPECT_EQ(colorPair.majorColor, WHITE);
-    EXPECT_EQ(colorPair.minorColor, BROWN);
+    char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
+    
+    colorPairs = GetColorFromPairNumber(4);
+    EXPECT_EQ(colorPairs.majorColor, WHITE);
+    EXPECT_EQ(colorPairs.minorColor, BROWN);
+    ColorPairToString(&colorPair, colorPairNames);
+    printf("Got pair %s\n", colorPairNames);
 
-    NumberToColorPair(5, WHITE, SLATE);
-    EXPECT_EQ(colorPair.majorColor, WHITE);
-    EXPECT_EQ(colorPair.minorColor, SLATE);
+    colorPairs = GetColorFromPairNumber(5);
+    EXPECT_EQ(colorPairs.majorColor, WHITE);
+    EXPECT_EQ(colorPairs.minorColor, SLATE);
+    ColorPairToString(&colorPair, colorPairNames);
+    printf("Got pair %s\n", colorPairNames);
+
 }
 
 Test(Testcase2,testPairToNumber)
 {
-    ColorPairToNumber(BLACK, ORANGE, 12);
-    EXPECT_EQ(colorPair.pairNumber, 12);
-
-    ColorPairToNumber(VIOLET, SLATE, 25);
-    EXPECT_EQ(colorPair.pairNumber, 25);
+    int pairnumber
+    colorPairs = {{BLACK},{ORANGE}};
+    pairnumber = GetPairNumberFromColor(&colorPairs);
+    EXPECT_EQ(pairnumber, 12);
+    printf("Got pair number %d\n", pairNumber);
+    
+    colorPairs = {{VIOLET},{SLATE}};
+    pairnumber = GetPairNumberFromColor(&colorPairs);
+    EXPECT_EQ(pairNumber, 25);
+    printf("Got pair number %d\n", pairNumber);
 }
 
 
