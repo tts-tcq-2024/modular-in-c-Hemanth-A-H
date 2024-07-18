@@ -14,7 +14,6 @@ extern const char* MinorColorNames[];
 typedef struct {
     enum MajorColor majorColor;
     enum MinorColor minorColor;
-    int pairNumber;
 } ColorPair;
 
 int GetPairNumberFromColor(const ColorPair* colorPair);
