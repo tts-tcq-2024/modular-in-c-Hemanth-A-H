@@ -2,11 +2,6 @@
 #include <assert.h> 
 #include "color_code.h"
 
-extern int numberOfMinorColors, numberOfMajorColors;
-extern const int MAX_COLORPAIR_NAME_CHARS;
-extern const char* MajorColorNames[];
-extern const char* MinorColorNames[];
-
 void ColorPairToString(const ColorPair* colorPair, char* buffer) {
     sprintf(buffer, "%s %s",
         MajorColorNames[colorPair->majorColor],
