@@ -2,7 +2,8 @@
 #include <assert.h> 
 #include "color_code.h"
 
-extern MAX_COLORPAIR_NAME_CHARS, numberOfMinorColors, numberOfMajorColors;
+extern int numberOfMinorColors, numberOfMajorColors;
+extern const int MAX_COLORPAIR_NAME_CHARS;
 extern const char* MajorColorNames[];
 extern const char* MinorColorNames[];
 
