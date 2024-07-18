@@ -1,20 +1,14 @@
 #ifndef COLOR_CODE_H
 #define COLOR_CODE_H
 
-const int MAX_COLORPAIR_NAME_CHARS = 16;
+
 enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
 enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
 
-extern const char* MajorColorNames[] = {
-    "White", "Red", "Black", "Yellow", "Violet"
-};
+extern const char* MajorColorNames[5];
+extern const char* MinorColorNames[5];
 
-#define numberOfMajorColors  (sizeof(MajorColorNames) / sizeof(MajorColorNames[0]))
-
-extern const char* MinorColorNames[] = {
-    "Blue", "Orange", "Green", "Brown", "Slate"
-};
-
+#define numberOfMajorColors (sizeof(MajorColorNames) / sizeof(MajorColorNames[0]))
 #define numberOfMinorColors (sizeof(MinorColorNames) / sizeof(MinorColorNames[0]))
 
 typedef struct {
