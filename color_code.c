@@ -2,6 +2,10 @@
 #include <assert.h> 
 #include "color_code.h"
 
+extern MAX_COLORPAIR_NAME_CHARS, numberOfMinorColors, numberOfMajorColors;
+extern const char* MajorColorNames[];
+extern const char* MinorColorNames[];
+
 void ColorPairToString(const ColorPair* colorPair, char* buffer) {
     sprintf(buffer, "%s %s",
         MajorColorNames[colorPair->majorColor],
@@ -23,9 +27,7 @@ int GetPairNumberFromColor(const ColorPair* colorPair) {
             colorPair->minorColor + 1;
 }
 
-void testNumberToPair(int pairNumber,
-    enum MajorColor expectedMajor,
-    enum MinorColor expectedMinor)
+void testNumberToPair(int pairNumber,enum MajorColor expectedMajor,enum MinorColor expectedMinor)
 {
     ColorPair colorPair = GetColorFromPairNumber(pairNumber);
     char colorPairNames[MAX_COLORPAIR_NAME_CHARS];
@@ -35,10 +37,7 @@ void testNumberToPair(int pairNumber,
     assert(colorPair.minorColor == expectedMinor);
 }
 
-void testPairToNumber(
-    enum MajorColor major,
-    enum MinorColor minor,
-    int expectedPairNumber)
+void testPairToNumber(enum MajorColor major,enum MinorColor minor,int expectedPairNumber)
 {
     ColorPair colorPair;
     colorPair.majorColor = major;
